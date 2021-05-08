@@ -419,7 +419,7 @@ export async function randomMarker() {
 export async function getWeather(lattytude, longytude) {
     const result = await axios({
         method: 'get',
-        url: `http://api.openweathermap.org/data/2.5/weather?lat=${lattytude}&lon=${longytude}&appid=832b0e772d22da2b61c5171829eca009`,
+        url: `https://api.openweathermap.org/data/2.5/weather?lat=${lattytude}&lon=${longytude}&appid=832b0e772d22da2b61c5171829eca009`,
     });
     let answer = (result.data.main.temp - 273.15) * 9 / 5 + 32;
     return answer
